@@ -66,7 +66,7 @@ export class Service{
  
   async getPost(slug){
     try {
-      return await this.databases.deleteDocument(
+      return await this.databases.getDocument(
         conf.appwriteDatabseId,
         conf.appwriteCollectionId,
         slug ,//slug here is document id

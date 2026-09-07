@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import service from '../appwrite/config';
 import { Container } from '../components';
 import PostCard from '../components/PostCard';
+
 function Home() {
     const [posts, setPosts] = useState([])
 
@@ -13,6 +14,17 @@ function Home() {
         })
     }, [])
   
+
+//     useEffect(() => {
+//     service.getPosts().then((posts) => {
+//         console.log("FULL RESPONSE:", posts);
+        
+//         if (posts) {
+//             console.log("DOCUMENTS:", posts.documents);
+//             setPosts(posts.documents);
+//         }
+//     });
+// }, []);
     if (posts.length === 0) {
         return (
             <div className="w-full py-8 mt-4 text-center">
