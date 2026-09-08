@@ -14,17 +14,6 @@ function Home() {
         })
     }, [])
   
-
-//     useEffect(() => {
-//     service.getPosts().then((posts) => {
-//         console.log("FULL RESPONSE:", posts);
-        
-//         if (posts) {
-//             console.log("DOCUMENTS:", posts.documents);
-//             setPosts(posts.documents);
-//         }
-//     });
-// }, []);
     if (posts.length === 0) {
         return (
             <div className="w-full py-8 mt-4 text-center">

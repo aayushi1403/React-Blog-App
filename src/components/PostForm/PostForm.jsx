@@ -3,11 +3,12 @@ import React from 'react'
 import { useCallback } from "react"
 import {Button,Input,Select,RTE} from '../index'
 import service from '../../appwrite/config'
-import {data, useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { useForm } from 'react-hook-form'
+
 function PostForm({post}) {
-  const {register,handleSubmit,watch,setValue,
+  const {register,handleSubmit,watch,setValue,control,
     getValues}=useForm({
       defaultValues:{
         title:post?.title|| '',
@@ -19,12 +20,12 @@ function PostForm({post}) {
     })
 
     const navigate=useNavigate()
-    const userData=useSelector(state=>state.user.userData)
+    const userData=useSelector((state)=>state.auth.userData)
     
     const submit=async(data)=>{
       if(post)
       {
-        const file=data.image[0]?service.uploadFile(data.image[0]):null
+        const file=data.image[0]?service.uploadFile(data.image[0]):null;
       
         if(file)
         {
