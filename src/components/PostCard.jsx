@@ -3,6 +3,10 @@ import service from "../appwrite/config"
 import { Link } from 'react-router-dom'
 
 function PostCard({$id,title,featuredImage}) {
+  // const imageUrl = service.getFilePreview(featuredImage);
+
+  // console.log("Image ID:", featuredImage);
+  // console.log("Image URL:", imageUrl);
   return (
     <Link
     to={`/post/${$id}`}>
