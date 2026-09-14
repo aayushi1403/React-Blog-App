@@ -8,6 +8,9 @@ function Home() {
 
     useEffect(() => {
         service.getPosts().then((posts) => {
+    //           console.log("GET POSTS RESPONSE:", response)
+    // console.log("DOCUMENTS:", response?.documents)
+
             if (posts) {
                 setPosts(posts.documents)
             }
