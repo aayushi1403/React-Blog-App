@@ -87,7 +87,7 @@ export class Service{
         queries,
     )
    } catch (error) {
-     console.log("appwrite service:: getposts :: error",error)
+     console.log("appwrite service:: getposts :: error",error);
      return false;
    }
   }
@@ -121,7 +121,7 @@ export class Service{
   }
   
   getFilePreview(fileId){
-    return this.bucket.getFilePreview(
+    return this.bucket.getFileView(
       conf.appwriteBucketId,
       fileId
     )

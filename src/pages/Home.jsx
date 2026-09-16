@@ -8,8 +8,8 @@ function Home() {
 
     useEffect(() => {
         service.getPosts().then((posts) => {
-    //           console.log("GET POSTS RESPONSE:", response)
-    // console.log("DOCUMENTS:", response?.documents)
+   console.log("GET POSTS RESPONSE:", posts)
+        console.log("DOCUMENTS:", posts?.documents)
 
             if (posts) {
                 setPosts(posts.documents)
@@ -38,7 +38,7 @@ function Home() {
                 <div className='flex flex-wrap'>
                     {posts.map((post) => (
                         <div key={post.$id} className='p-2 w-1/4'>
-                            <PostCard {...post} />
+                            <PostCard  {...post} />
                         </div>
                     ))}
                 </div>
