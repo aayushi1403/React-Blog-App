@@ -1,6 +1,6 @@
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
-import Logo from "./logo";
+import Logo from "../components/Logo";
 import LogoutButton from "./Header/LogoutButton";
 import Container from  "./container/Container"
 import RTE from "./RTE";
