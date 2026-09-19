@@ -78,7 +78,7 @@ VITE_TINYMCE_API_KEY=your_api_key
 
 ## 🌐 Live Demo
 
-**Live:** `Add your deployed link here`
+**Live:** https://react-blog-app-ten.vercel.app/
 
 ## 👩‍💻 Author
 
